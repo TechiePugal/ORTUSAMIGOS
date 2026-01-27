@@ -61,14 +61,14 @@ function App() {
         {/* Company Name (VISIBLE ON MOBILE) */}
         <div className="flex flex-col">
           <h1
-            className={`font-bold leading-none text-lg sm:text-3xl mt-4 ml-4 transition-colors duration-300 ${
+            className={`text-[20px] font-bold leading-none text-lg sm:text-3xl mt-4 ml-4 transition-colors duration-300 ${
               scrolled ? "text-yellow-600" : "text-yellow-400"
             }`}
           >
             ORTUS AMIGOS
           </h1>
           <p
-  className={`text-[10px] sm:text-lg ml-12 font-semibold tracking-wider transition-colors duration-300 ${
+  className={`text-[15px] sm:text-lg ml-10 font-semibold tracking-wider transition-colors duration-300 ${
     scrolled ? "text-slate-700" : "text-slate-100"
   }`}
 >
