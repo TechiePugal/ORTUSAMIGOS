@@ -1,5 +1,8 @@
-import { useEffect, useState } from 'react';
-import { Menu, X, Mail, Phone, Instagram,MapPin, ArrowUp, Network, Shield, Server, Camera, Package, ChevronRight } from 'lucide-react';
+import { useEffect, useState } from 'react';import { 
+  Menu, X, Mail, Phone, Instagram, MapPin, ArrowUp,
+  Network, Shield, Server, Camera, Package, ChevronRight,
+  Code, Cloud, Bot, Cpu, Search
+} from 'lucide-react';
 import Logo from  './assets/logo.png';
 // import { Mail, Phone, Instagram,  } from "lucide-react";
 
@@ -65,7 +68,7 @@ function App() {
               scrolled ? "text-yellow-600" : "text-yellow-400"
             }`}
           >
-            ORTUS AMIGOS
+            ORTUSAMIGOS
           </h1>
           <p
   className={`text-[15px] sm:text-lg ml-10 font-semibold tracking-wider transition-colors duration-300 ${
@@ -214,7 +217,7 @@ function App() {
           Secure, scalable, and future-ready IT services across Dubai & UAE.
         </p>
 
-        <p className="text-base sm:text-l mb-7 text-gray-200 leading-relaxed text-justify md:text-left">
+        <p className="text-base sm:text-l  mb-7 text-gray-200 leading-relaxed text-justify md:text-left">
           Ortus Amigos IT Solutions is a UAE-based IT services company delivering professional IT infrastructure, network security, server management, CCTV solutions, and IT hardware support. We help businesses operate efficiently with secure and cost-effective technology.
         </p>
 
@@ -284,38 +287,77 @@ function App() {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
       {/* Card */}
-      {[
-        {
-          icon: Network,
-          title: "Network Switch Installation & Configuration",
-          desc:
-            "Professional installation and configuration ensuring stable connectivity, performance, and secure communication.",
-        },
-        {
-          icon: Shield,
-          title: "Firewall Security Setup & Management",
-          desc:
-            "Advanced firewall design and management to protect your business network from cyber threats.",
-        },
-        {
-          icon: Server,
-          title: "Server & NAS Solutions",
-          desc:
-            "Secure server and NAS storage solutions for data management, backup, and business continuity.",
-        },
-        {
-          icon: Camera,
-          title: "CCTV Installation & Monitoring",
-          desc:
-            "End-to-end CCTV solutions enhancing surveillance and security for commercial environments.",
-        },
-        {
-          icon: Package,
-          title: "IT Devices & Accessories Delivery",
-          desc:
-            "Reliable supply of IT hardware and accessories ensuring quality, compatibility, and performance.",
-        },
-      ].map(({ icon: Icon, title, desc }, index) => (
+{[
+  {
+    icon: Network,
+    title: "Network Switch Installation & Configuration",
+    desc:
+      "Professional installation and configuration ensuring stable connectivity, performance, and secure communication.",
+  },
+  {
+    icon: Shield,
+    title: "Firewall Security Setup & Management",
+    desc:
+      "Advanced firewall design and management to protect your business network from cyber threats.",
+  },
+  {
+    icon: Server,
+    title: "Server & NAS Solutions",
+    desc:
+      "Secure server and NAS storage solutions for data management, backup, and business continuity.",
+  },
+  {
+    icon: Camera,
+    title: "CCTV Installation & Monitoring",
+    desc:
+      "End-to-end CCTV solutions enhancing surveillance and security for commercial environments.",
+  },
+  {
+    icon: Package,
+    title: "IT Devices & Accessories Delivery",
+    desc:
+      "Reliable supply of IT hardware and accessories ensuring quality, compatibility, and performance.",
+  },
+
+  /* ===== NEW SERVICES ADDED BELOW ===== */
+
+  {
+    icon: Code,
+    title: "Web & Software Development",
+    desc:
+      "Custom websites and business software solutions tailored to enterprise needs.",
+  },
+  {
+    icon: Search,
+    title: "Digital Marketing & SEO",
+    desc:
+      "SEO-focused websites and performance-driven marketing strategies.",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Customization",
+    desc:
+      "Scalable and secure cloud infrastructure solutions for modern businesses.",
+  },
+  {
+    icon: Bot,
+    title: "AI Chat Support",
+    desc:
+      "Smart AI-powered chatbot automation systems for customer engagement.",
+  },
+  {
+    icon: Cpu,
+    title: "Industrial Applications",
+    desc:
+      "Enterprise and industrial-grade automation software systems.",
+  },
+  {
+    icon: Shield,
+    title: "Cybersecurity & System Protection",
+    desc:
+      "Secure applications, data protection frameworks, and vulnerability assessments.",
+  },
+].map(({ icon: Icon, title, desc }, index) => (
         <div
           key={index}
           className="group bg-gradient-to-br from-slate-900 to-blue-900 p-7 md:p-8 rounded-xl text-white
@@ -488,29 +530,61 @@ function App() {
 </section>
 
 
-      <section id="mission" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Mission & Vision</h2>
-          </div>
+<section id="mission" className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+        Mission & Vision
+      </h2>
+    </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-900 to-slate-900 p-12 rounded-xl text-white">
-              <h3 className="text-3xl font-bold mb-6 text-amber-400">Our Mission</h3>
-              <p className="text-xl leading-relaxed">
-                To deliver secure, reliable, and scalable IT infrastructure solutions that enhance business performance and protect digital assets.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-900 to-blue-900 p-12 rounded-xl text-white">
-              <h3 className="text-3xl font-bold mb-6 text-amber-400">Our Vision</h3>
-              <p className="text-xl leading-relaxed">
-                To become a trusted IT solutions partner in the UAE by enabling businesses with innovative, secure, and future-ready technology.
-              </p>
-            </div>
-          </div>
+    <div className="grid md:grid-cols-2 gap-8">
+      
+      {/* Mission */}
+      <div className="bg-gradient-to-br from-blue-900 to-slate-900 p-12 rounded-xl text-white shadow-xl">
+        <h3 className="text-3xl font-bold mb-6 text-amber-400">
+          Our Mission
+        </h3>
+        <div className="space-y-4 text-lg leading-relaxed">
+          <p>
+            To deliver secure and scalable <span className="font-semibold">IT infrastructure solutions in the UAE</span> that power modern businesses.
+          </p>
+          <p>
+            To provide advanced <span className="font-semibold">network security, cloud computing, and data protection services</span>.
+          </p>
+          <p>
+            To enhance operational efficiency through reliable <span className="font-semibold">server management and cybersecurity solutions</span>.
+          </p>
+          <p>
+            To support digital transformation with cost-effective and future-ready <span className="font-semibold">enterprise IT services</span>.
+          </p>
         </div>
-      </section>
+      </div>
+
+      {/* Vision */}
+      <div className="bg-gradient-to-br from-slate-900 to-blue-900 p-12 rounded-xl text-white shadow-xl">
+        <h3 className="text-3xl font-bold mb-6 text-amber-400">
+          Our Vision
+        </h3>
+        <div className="space-y-4 text-lg leading-relaxed">
+          <p>
+            To become a leading <span className="font-semibold">IT solutions provider in the UAE</span> trusted by enterprises and growing businesses.
+          </p>
+          <p>
+            To drive innovation through cutting-edge <span className="font-semibold">cloud infrastructure and cybersecurity technologies</span>.
+          </p>
+          <p>
+            To set industry standards in secure, reliable, and high-performance <span className="font-semibold">IT infrastructure management</span>.
+          </p>
+          <p>
+            To build long-term partnerships by delivering scalable, future-proof technology solutions.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
