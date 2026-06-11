@@ -133,7 +133,7 @@ const Footer = () => {
       © {currentYear} Ortus Amigos IT Solutions L.L.C S.O.C. All rights reserved.
     </p>
 
-    <span className="hidden sm:inline text-primary-foreground/30">|</span>
+    <span className="hidden sm:inline text-primary-foreground/30"></span>
 
     {/* <a
       href="https://elitecrows.in"
