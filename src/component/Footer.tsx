@@ -1,4 +1,12 @@
-import { Mail, Phone, Instagram, MapPin, ArrowUp, X } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  Instagram,
+  MapPin,
+  ArrowUp,
+  X,
+} from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
 import logo from "../assets/logo.png";
 
@@ -31,7 +39,6 @@ const Footer = () => {
       <footer className="bg-primary ml-20 mr-20 text-primary-foreground">
         <div className="container-custom px-4 py-12 md:py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-
             {/* Company Info */}
             <div>
               <img
@@ -39,10 +46,12 @@ const Footer = () => {
                 alt="Ortus Amigos IT Solutions"
                 className="h-16 w-auto mb-4 brightness-0 invert"
               />
+
               <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
                 Your trusted IT solutions partner in Dubai and across the UAE.
               </p>
 
+              {/* Social Icons */}
               <div className="flex items-center gap-3">
                 <a
                   href="https://instagram.com/ortus_amigos"
@@ -52,6 +61,16 @@ const Footer = () => {
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
+
+                <a
+                  href="https://wa.me/971559602645"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-secondary/20 transition-colors"
+                >
+                  <FaWhatsapp className="w-5 h-5" />
+                </a>
+
                 <a
                   href="mailto:sales@ortusamigos.com"
                   className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-secondary/20 transition-colors"
@@ -95,6 +114,7 @@ const Footer = () => {
             {/* Contact */}
             <div>
               <h4 className="font-bold text-lg mb-4">Contact Us</h4>
+
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-secondary mt-0.5" />
@@ -102,6 +122,7 @@ const Footer = () => {
                     Dubai, United Arab Emirates
                   </span>
                 </li>
+
                 <li className="flex items-start gap-3">
                   <Phone className="w-4 h-4 text-secondary mt-0.5" />
                   <a
@@ -111,6 +132,7 @@ const Footer = () => {
                     +971 55 960 2645
                   </a>
                 </li>
+
                 <li className="flex items-start gap-3">
                   <Mail className="w-4 h-4 text-secondary mt-0.5" />
                   <a
@@ -125,56 +147,42 @@ const Footer = () => {
           </div>
 
           {/* Bottom Bar */}
-{/* Bottom Bar */}
-<div className="border-t border-primary-foreground/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-  
-  <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
-    <p className="text-primary-foreground/60 text-sm">
-      © {currentYear} Ortus Amigos IT Solutions L.L.C S.O.C. All rights reserved.
-    </p>
+          <div className="border-t border-primary-foreground/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-primary-foreground/60 text-sm text-center sm:text-left">
+              © {currentYear} Ortus Amigos IT Solutions L.L.C S.O.C. All rights
+              reserved.
+            </p>
 
-    <span className="hidden sm:inline text-primary-foreground/30"></span>
+            <div className="flex items-center gap-6">
+              <button
+                onClick={() => setPopupType("terms")}
+                className="text-sm hover:text-secondary"
+              >
+                Terms & Conditions
+              </button>
 
-    {/* <a
-      href="https://elitecrows.in"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-primary-foreground/60 text-sm hover:text-secondary transition-colors"
-    >
-      Developed by <span className="font-semibold text-secondary">EliteCrows InfoTech</span>
-    </a> */}
-  </div>
+              <button
+                onClick={() => setPopupType("privacy")}
+                className="text-sm hover:text-secondary"
+              >
+                Privacy Policy
+              </button>
 
-  <div className="flex items-center gap-6">
-    <button
-      onClick={() => setPopupType("terms")}
-      className="text-sm hover:text-secondary"
-    >
-      Terms & Conditions
-    </button>
-    <button
-      onClick={() => setPopupType("privacy")}
-      className="text-sm hover:text-secondary"
-    >
-      Privacy Policy
-    </button>
-
-    <button
-      onClick={scrollToTop}
-      className="p-2 bg-secondary/20 rounded-lg hover:bg-secondary/30"
-    >
-      <ArrowUp className="w-5 h-5 text-secondary" />
-    </button>
-  </div>
-</div>
+              <button
+                onClick={scrollToTop}
+                className="p-2 bg-secondary/20 rounded-lg hover:bg-secondary/30"
+              >
+                <ArrowUp className="w-5 h-5 text-secondary" />
+              </button>
+            </div>
+          </div>
         </div>
       </footer>
 
-      {/* POPUP MODAL */}
+      {/* Popup Modal */}
       {popupType && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
           <div className="bg-white max-w-2xl w-full p-6 rounded-xl shadow-xl relative overflow-y-auto max-h-[80vh]">
-            
             <button
               onClick={() => setPopupType(null)}
               className="absolute top-4 right-4 text-gray-500 hover:text-black"
@@ -183,14 +191,17 @@ const Footer = () => {
             </button>
 
             <h2 className="text-2xl font-bold mb-4">
-              {popupType === "terms" ? "Terms & Conditions" : "Privacy Policy"}
+              {popupType === "terms"
+                ? "Terms & Conditions"
+                : "Privacy Policy"}
             </h2>
 
             {popupType === "terms" && (
               <p className="text-sm text-gray-700 leading-relaxed">
-                By using our services, you agree to comply with our business policies.
-                Ortus Amigos IT Solutions provides IT infrastructure, security,
-                and software services subject to agreed contracts and service terms.
+                By using our services, you agree to comply with our business
+                policies. Ortus Amigos IT Solutions provides IT infrastructure,
+                security, and software services subject to agreed contracts and
+                service terms.
               </p>
             )}
 
@@ -209,3 +220,4 @@ const Footer = () => {
 };
 
 export default Footer;
+```
