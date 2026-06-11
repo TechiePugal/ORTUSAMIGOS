@@ -26,21 +26,29 @@ const Footer = () => {
     { name: "Contact", href: "#contact" },
   ];
 
-  const services = [
-    "Network Installation",
+  const networkServices = [
+    "Network Switch Installation",
     "Firewall Security",
     "Server & NAS Solutions",
     "CCTV Installation",
-    "IT Hardware Supply",
+    "IT Devices & Accessories",
+  ];
+
+  const softwareServices = [
+    "Web & Software Development",
+    "Digital Marketing & SEO",
+    "Cloud Customization",
+    "AI Chat Support",
+    "Cybersecurity & Protection",
   ];
 
   return (
     <>
       <footer className="bg-primary ml-20 mr-20 text-primary-foreground">
         <div className="container-custom px-4 py-12 md:py-16">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
             {/* Company Info */}
-            <div>
+            <div className="sm:col-span-2 lg:col-span-1">
               <img
                 src={logo}
                 alt="Ortus Amigos IT Solutions"
@@ -97,11 +105,25 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Services */}
+            {/* Network Services */}
             <div>
-              <h4 className="font-bold text-lg mb-4">Our Services</h4>
+              <h4 className="font-bold text-lg mb-4">Network Services</h4>
               <ul className="space-y-2">
-                {services.map((service) => (
+                {networkServices.map((service) => (
+                  <li key={service}>
+                    <span className="text-primary-foreground/70 text-sm">
+                      {service}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Software Services */}
+            <div>
+              <h4 className="font-bold text-lg mb-4">Software Services</h4>
+              <ul className="space-y-2">
+                {softwareServices.map((service) => (
                   <li key={service}>
                     <span className="text-primary-foreground/70 text-sm">
                       {service}
