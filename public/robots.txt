@@ -1,0 +1,8 @@
+# robots.txt for Ortus Amigos IT Solutions
+User-agent: *
+Allow: /
+
+# Block nothing sensitive on a single-page marketing site
+Disallow:
+
+Sitemap: https://www.ortusamigos.com/sitemap.xml
