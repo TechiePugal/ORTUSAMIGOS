@@ -68,7 +68,7 @@ function App() {
               scrolled ? "text-yellow-600" : "text-yellow-400"
             }`}
           >
-            ORTUSAMIGOS
+            ORTUS AMIGOS
           </h1>
           <p
   className={`text-[15px] sm:text-lg ml-10 font-semibold tracking-wider transition-colors duration-300 ${
