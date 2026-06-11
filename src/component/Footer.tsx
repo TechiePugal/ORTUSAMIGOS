@@ -135,14 +135,14 @@ const Footer = () => {
 
     <span className="hidden sm:inline text-primary-foreground/30">|</span>
 
-    <a
+    {/* <a
       href="https://elitecrows.in"
       target="_blank"
       rel="noopener noreferrer"
       className="text-primary-foreground/60 text-sm hover:text-secondary transition-colors"
     >
       Developed by <span className="font-semibold text-secondary">EliteCrows InfoTech</span>
-    </a>
+    </a> */}
   </div>
 
   <div className="flex items-center gap-6">
